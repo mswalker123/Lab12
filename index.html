@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ToDo List</title>
+    <link type="text/css" rel="stylesheet" href='styles.css'/>
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+  </head>
+  <body ng-app="myList">
+
+  <h3>Todo List</h3>
+
+
+    <div ng-controller ='itemsInList'>SEARCH
+<input ng-model="itemsInList"/>
+
+<div id = "listBox">
+
+      <ul>
+        <li ng-repeat="item in items | filter: itemsInList">
+          {{item}}
+          <input type="checkbox" >Done
+          <!-- <input type="checkbox"checklist-mode="checked.items" checklist-value = items >Done -->
+        </li>
+      </ul>
+  </div>
+<form id="add-More">
+      <input ng-model="addMoreItems" id="add more">
+      <button ng-click = "addItem()"> Add </button>
+</form>
+
+
+
+    </div>
+
+
+
+
+    <script src="angular.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
