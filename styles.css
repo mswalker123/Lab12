@@ -62,4 +62,9 @@ h3 {
 
 body{
   font-family: Gloria Hallelujah;
+  background-color: oldlace;
+}
+
+ul{
+   list-style-type: square;
 }
